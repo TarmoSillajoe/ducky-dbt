@@ -1,0 +1,34 @@
+*.db
+*.duckdb
+*.xlsx
+*.dbf
+logs/
+# Ignore dbt log files
+logs/
+dbt.log
+
+# Ignore compiled files
+target/
+
+output/
+
+# Ignore dbt packages
+dbt_packages/
+
+# Ignore environment-specific files
+.env
+
+# Ignore Python virtual environment
+venv/
+.venv/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore temporary files
+*.pyc
+__pycache__/
+*.swp

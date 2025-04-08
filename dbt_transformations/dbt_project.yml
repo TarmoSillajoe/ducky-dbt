@@ -1,0 +1,29 @@
+name: "dbt_transformations"
+version: "1.0.0"
+config-version: 2
+
+profile: "dbt_transformations"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+on-run-start:
+  - "ATTACH '{{ env_var('DBT_SOURCE_DUCKDB') }}' AS baodb;"
+  - "ATTACH '{{ env_var('DBT_SOURCE_POSTGRES') }}' AS pgdb (type postgres);"
+on-run-end:
+  - "detach baodb;"
+  - "detach pgdb;"
+
+models:
+  dbt_transformations:
+    +materialized: view
+    # Add any specific model configurations here if needed

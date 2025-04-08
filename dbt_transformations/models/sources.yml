@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: downloads
+    meta:
+      external_location: "/home/tarmo/Downloads/ajalugu.parquet"
+    tables:
+      - name: sales_history

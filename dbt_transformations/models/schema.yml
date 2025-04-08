@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: sales_history
+    description: "Sold items 2025-03-01...2025-03-31"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - firma_id
+            - jrk
+            - siffer
+            - vkogus
+    columns:
+      - name: siffer
+        description: "sku of the product"
+        tests:
+          - not_null
+      - name: firma_id
+        description: "Customer's code in BAO's system"
+        tests:
+          - not_null
+      - name: vkogus
+        description: "sold quantity in pcs"
+        tests:
+          - not_null
