@@ -3,5 +3,5 @@ dbt_transformations:
   outputs:
     dev:
       type: duckdb
-      path: '../{{ env_var("DUCKDB_DATABASE", "data/staging/data.duckdb") }}'
+      path: '../{{ env_var("DBT_DUCKDB_DATABASE", "data/staging/data.duckdb") }}'
       threads: 4
