@@ -1,5 +1,5 @@
 {{ config(
-        materialized='table',
+        materialized='view',
     ) }}
 
 select siffer,nimi from baodb.lmmat

@@ -6,3 +6,9 @@ sources:
       external_location: "/home/tarmo/bao_tooted/data/processed/balanss_ajalugu.parquet"
     tables:
       - name: sales_history
+
+  - name: autos_offer
+    meta:
+      external_location: "/home/tarmo/bao_tooted/data/raw/2025_04_23_autos.csv"
+    tables:
+      - name: autos
