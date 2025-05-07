@@ -24,3 +24,9 @@ sources:
       external_location: "/home/tarmo/bao_tooted/data/raw/FIRMA.DBF"
     tables:
       - name: stg_bao_firma
+
+  - name: bao_replacements
+    meta:
+      external_location: "/home/tarmo/bao_tooted/data/raw/ASENDUS.DBF"
+    tables:
+      - name: stg_bao_replacements
