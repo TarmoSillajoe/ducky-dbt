@@ -7,8 +7,20 @@ sources:
     tables:
       - name: sales_history
 
-  - name: autos_offer
+  - name: bao_lmmat
     meta:
-      external_location: "/home/tarmo/bao_tooted/data/raw/2025_04_23_autos.csv"
+      external_location: "/home/tarmo/bao_tooted/data/raw/LM_MAT.DBF"
     tables:
-      - name: autos
+      - name: stg_bao_lmmat
+
+  - name: bao_stock
+    meta:
+      external_location: "/home/tarmo/bao_tooted/data/raw/LL020000.DBF"
+    tables:
+      - name: stg_bao_stock
+
+  - name: bao_firma
+    meta:
+      external_location: "/home/tarmo/bao_tooted/data/raw/FIRMA.DBF"
+    tables:
+      - name: stg_bao_firma

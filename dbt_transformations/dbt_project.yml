@@ -17,6 +17,7 @@ clean-targets:
   - "dbt_packages"
 
 on-run-start:
+  - "load spatial;"
   - "ATTACH '{{ env_var('DBT_SOURCE_DUCKDB') }}' AS baodb;"
   - "ATTACH '{{ env_var('DBT_SOURCE_POSTGRES') }}' AS pgdb (type postgres);"
 on-run-end:

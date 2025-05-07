@@ -12,8 +12,8 @@ with sales as (
         h.jrk,
         lmmat.nimi as nimetus
         from {{ source('downloads', 'sales_history') }} h
-        left join lmmat using (siffer)
+        left join {{ ref('stg_bao_lmmat') }} lmmat using (siffer)
         where h.liik = 'M' and h.firma_id not in ('MEIE') and h.firma_id not ilike 'E80%'
-            and h.kuup between '2025-03-01' and '2025-04-20'
+            and h.kuup between '2022-01-01' and today()
 )
 select * from sales
