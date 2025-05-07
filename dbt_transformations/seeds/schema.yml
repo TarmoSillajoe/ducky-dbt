@@ -1,0 +1,14 @@
+version: 2
+
+seeds:
+  - name: bao_product_groups
+    description: "BAO product groups ids mapping to descriptions"
+    columns:
+      - name: grupp
+        tests:
+          - unique
+          - not_null
+      - name: bao_group_name
+        tests:
+          - unique
+          - not_null
