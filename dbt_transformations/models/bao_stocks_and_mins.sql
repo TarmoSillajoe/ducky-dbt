@@ -14,7 +14,7 @@ with
             ) as stock,
             khind
         from
-            {{ ref('stg_bao_stocks') }}
+            {{ ref('stg_bao__stocks') }}
     ),
     ------------tr
     min_levels as (

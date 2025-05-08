@@ -12,7 +12,7 @@ with sales as (
         h.jrk,
         lmmat.nimi as nimetus
         from {{ source('downloads', 'sales_history') }} h
-        left join {{ ref('stg_bao_lmmat') }} lmmat using (siffer)
+        left join {{ ref('stg_bao__products') }} lmmat using (siffer)
         where h.liik = 'M' and h.firma_id not in ('MEIE') and h.firma_id not ilike 'E80%'
             and h.kuup between '2022-01-01' and today()
 )

@@ -38,6 +38,6 @@ select
         sisaeg,
         modaeg
 from st_read(
-        {{ source('bao_lmmat', 'stg_bao_lmmat') }},
+        {{ source('bao_products', 'stg_bao__products') }},
         open_options = ARRAY ['ENCODING=ISO-8859-1']
     )

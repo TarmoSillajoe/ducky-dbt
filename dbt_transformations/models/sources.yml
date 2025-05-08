@@ -7,29 +7,29 @@ sources:
     tables:
       - name: sales_history
 
-  - name: bao_lmmat
+  - name: bao_products
     meta:
       external_location: "/home/tarmo/bao_tooted/data/raw/LM_MAT.DBF"
     tables:
-      - name: stg_bao_lmmat
+      - name: stg_bao__products
 
   - name: bao_stocks
     meta:
       external_location: "/home/tarmo/bao_tooted/data/raw/LL020000.DBF"
     tables:
-      - name: stg_bao_stocks
+      - name: stg_bao__stocks
 
   - name: bao_firma
     meta:
       external_location: "/home/tarmo/bao_tooted/data/raw/FIRMA.DBF"
     tables:
-      - name: stg_bao_firma
+      - name: stg_bao__firma
 
   - name: bao_replacements
     meta:
       external_location: "/home/tarmo/bao_tooted/data/raw/ASENDUS.DBF"
     tables:
-      - name: stg_bao_replacements
+      - name: stg_bao__replacements
 
   - name: fi_stocks
     meta:

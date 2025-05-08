@@ -9,6 +9,6 @@ select * exclude('nimi', 'taadr1', 'taadr2'),
     replace(taadr1, chr(132), '_') as taadr1,
     replace(taadr2, chr(132), '_') as taadr2
 from st_read(
-    {{ source('bao_firma', 'stg_bao_firma') }},
+    {{ source('bao_firma', 'stg_bao__firma') }},
         open_options = ARRAY ['ENCODING=ISO-8859-1']
     )
