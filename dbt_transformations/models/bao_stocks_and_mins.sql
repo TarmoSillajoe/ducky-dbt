@@ -14,9 +14,9 @@ with
             ) as stock,
             khind
         from
-            baodb.stock
+            {{ ref('stg_bao_stocks') }}
     ),
-    ------------
+    ------------tr
     min_levels as (
         select
             mi.code as siffer,
