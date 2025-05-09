@@ -15,10 +15,19 @@ models:
     columns:
       - name: siffer
         description: "sku of the product"
-        tests:
+        data_tests:
           - not_null
 
       - name: firma_id
         description: "Customer's code in BAO's system"
-        tests:
+        data_tests:
+          - not_null
+
+  - name: stg_fi__stocks.sql
+    description: "Finland - stocks and prices"
+    columns:
+      - name: mekofi_code
+        description: "sku of the product"
+        data_tests:
+          - unique
           - not_null
