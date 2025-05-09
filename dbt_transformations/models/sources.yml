@@ -36,3 +36,5 @@ sources:
       external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/koivunen/basic_info.csv"
     tables:
       - name: stg_fi_stocks
+
+  - name: postgres_db
