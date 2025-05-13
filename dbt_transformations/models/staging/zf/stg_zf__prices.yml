@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: wabco_prices_cleaned
+    description: >
+      Cleaned pricelist data. Valid from 2025-01-01 to 2026-01-01.
+
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - material
+            - scale
+
+    columns:
+      - name: material
+        description: SKU of the product
+        tests:
+          - not_null
+
+      - name: market
+        description: market in which the price is valid
+
+      - name: curr
+        description: the currency unit of the price (EUR)
+
+      - name: scale
+        description: minimal order quantity needed for the price
+
+      - name: description
+        description: product description
+
+      - name: price_unit
+        description: price for one unit
+
+      - name: valid_from
+        description: The start date of the period in which the price is valid
+
+      - name: valid_to
+        description: The end date of the period in which the price is valid

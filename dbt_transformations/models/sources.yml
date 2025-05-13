@@ -36,6 +36,7 @@ sources:
       external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/koivunen/basic_info.csv"
     tables:
       - name: stg_fi__stocks
+
   - name: zf_pricelist
     meta:
       external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/zf/B2 09052025.xlsx"

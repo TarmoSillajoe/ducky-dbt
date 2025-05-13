@@ -8,15 +8,15 @@ with pricelist_items as (
     from {{ ref('stg_fi__stocks') }}
 ),
 ------------
-db_items as (
+db_merchantitems as (
     select id, code, min_order
-    from {{ ref('stg_fi__db_items') }}
+    from {{ ref('stg_fi__db_merchantitems') }}
 ),
 ---------
 result as (
-    select db_items.id,
+    select db_merchantitems.id,
         pricelist_items.purchase_price
-    from db_items
+    from db_merchantitems
     join pricelist_items using(code, min_order)
 )
 from result
