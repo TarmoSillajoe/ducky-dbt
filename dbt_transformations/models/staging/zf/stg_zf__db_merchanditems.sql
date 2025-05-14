@@ -20,4 +20,4 @@ select
     modified_at
 
 from pgdb.merchant_item
-
+where merchant_id = 5

@@ -89,14 +89,14 @@ wheels = [
 
 [[package]]
 name = "click"
-version = "8.1.8"
+version = "8.2.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a", size = 226593, upload-time = "2024-12-21T18:38:44.339Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cd/0f/62ca20172d4f87d93cf89665fbaedcd560ac48b465bd1d92bfc7ea6b0a41/click-8.2.0.tar.gz", hash = "sha256:f5452aeddd9988eefa20f90f05ab66f17fce1ee2a36907fd30b05bbb5953814d", size = 235857, upload-time = "2025-05-10T22:21:03.111Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/7e/d4/7ebdbd03970677812aac39c869717059dbb71a4cfc033ca6e5221787892c/click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2", size = 98188, upload-time = "2024-12-21T18:38:41.666Z" },
+    { url = "https://files.pythonhosted.org/packages/a2/58/1f37bf81e3c689cc74ffa42102fa8915b59085f54a6e4a80bc6265c0f6bf/click-8.2.0-py3-none-any.whl", hash = "sha256:6b303f0b2aa85f1cb4e5303078fadcbcd4e476f114fab9b5007005711839325c", size = 102156, upload-time = "2025-05-10T22:21:01.352Z" },
 ]
 
 [[package]]
@@ -119,12 +119,12 @@ wheels = [
 
 [[package]]
 name = "dbt"
-version = "1.0.0.40.0"
+version = "1.0.0.40.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "setuptools" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ab/4c/07d20f84f10e9cf3518af2ebb0b907a8b2e2809af60f418972aedbba668a/dbt-1.0.0.40.0.tar.gz", hash = "sha256:b21726259f1c1c080ac8b7e2dcf5ba84de55071030698f9a08475e7c4ea7ebb9", size = 3317, upload-time = "2025-04-14T17:32:49.09Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/08/71/dc90e7afeaee8c141cb12497efaa53380832c5ed92e9f3a46b153e781baf/dbt-1.0.0.40.1.tar.gz", hash = "sha256:f7f743c809b427f957ea9620da9771594976e78b12e77ecd5cad201fc7023945", size = 3309, upload-time = "2025-05-09T17:25:43.597Z" }
 
 [[package]]
 name = "dbt-adapters"
@@ -145,7 +145,7 @@ wheels = [
 
 [[package]]
 name = "dbt-common"
-version = "1.23.0"
+version = "1.24.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "agate" },
@@ -161,9 +161,9 @@ dependencies = [
     { name = "requests" },
     { name = "typing-extensions" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0d/d9/541cb513c283909ec075d4416e60e1b6fd0806c1f765802001bde6cfd938/dbt_common-1.23.0.tar.gz", hash = "sha256:2ec733467dab4dbf515651a9347ce71e428986ddcb91ed4c2d5084c5e9dea2e3", size = 85264, upload-time = "2025-04-21T19:20:11.933Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/2e/4d/049d86537b36390263d15654ec7f227ac4733b0765816ff26fe95cb74535/dbt_common-1.24.0.tar.gz", hash = "sha256:f160d859cca81192d62ef74120a21c7be9a2fc36dac7860eb72696b8b006a2b8", size = 85867, upload-time = "2025-05-09T18:08:38.678Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5d/2e/8211aba7cbe1647bad62f5cac5aa58e9c16b4dcd651acc502bb55537615a/dbt_common-1.23.0-py3-none-any.whl", hash = "sha256:7519bb1b3e9133d6bf12f366d0ad2293a12501afd6c849534eadbd815b089930", size = 87828, upload-time = "2025-04-21T19:20:10.4Z" },
+    { url = "https://files.pythonhosted.org/packages/2b/9a/acf04c254873fdd59db129577dd798a9641b00cd36706183664c9bce1e0e/dbt_common-1.24.0-py3-none-any.whl", hash = "sha256:8b39e2a84ac32638d680b5371069df16383629ddba57bb3f66544b6cf9276052", size = 88461, upload-time = "2025-05-09T18:08:36.95Z" },
 ]
 
 [[package]]
@@ -742,11 +742,11 @@ wheels = [
 
 [[package]]
 name = "setuptools"
-version = "80.3.1"
+version = "80.4.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/70/dc/3976b322de9d2e87ed0007cf04cc7553969b6c7b3f48a565d0333748fbcd/setuptools-80.3.1.tar.gz", hash = "sha256:31e2c58dbb67c99c289f51c16d899afedae292b978f8051efaf6262d8212f927", size = 1315082, upload-time = "2025-05-04T18:47:04.397Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/95/32/0cc40fe41fd2adb80a2f388987f4f8db3c866c69e33e0b4c8b093fdf700e/setuptools-80.4.0.tar.gz", hash = "sha256:5a78f61820bc088c8e4add52932ae6b8cf423da2aff268c23f813cfbb13b4006", size = 1315008, upload-time = "2025-05-09T20:42:27.972Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/53/7e/5d8af3317ddbf9519b687bd1c39d8737fde07d97f54df65553faca5cffb1/setuptools-80.3.1-py3-none-any.whl", hash = "sha256:ea8e00d7992054c4c592aeb892f6ad51fe1b4d90cc6947cc45c45717c40ec537", size = 1201172, upload-time = "2025-05-04T18:47:02.575Z" },
+    { url = "https://files.pythonhosted.org/packages/b1/93/dba5ed08c2e31ec7cdc2ce75705a484ef0be1a2fecac8a58272489349de8/setuptools-80.4.0-py3-none-any.whl", hash = "sha256:6cdc8cb9a7d590b237dbe4493614a9b75d0559b888047c1f67d49ba50fc3edb2", size = 1200812, upload-time = "2025-05-09T20:42:25.325Z" },
 ]
 
 [[package]]

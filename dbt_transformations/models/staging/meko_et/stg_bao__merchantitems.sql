@@ -2,7 +2,7 @@
 
 select 
     -- ids
-    id as merchant_item_id,
+    id,
     item_id,
     merchant_id,
 
