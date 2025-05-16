@@ -43,4 +43,8 @@ sources:
     tables:
       - name: stg_zf__prices
 
-  - name: postgres_db
+  - name: auger_pricelist
+    meta:
+      external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/auger/2025_04_auger_pricelist.xlsx"
+    tables:
+      - name: stg_auger__prices

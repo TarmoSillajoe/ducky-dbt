@@ -18,6 +18,7 @@ clean-targets:
 
 on-run-start:
   - "load spatial;"
+  - "load excel;"
   - "ATTACH '{{ env_var('DBT_SOURCE_DUCKDB') }}' AS baodb;"
   - "ATTACH '{{ env_var('DBT_SOURCE_POSTGRES') }}' AS pgdb (type postgres);"
 on-run-end:
