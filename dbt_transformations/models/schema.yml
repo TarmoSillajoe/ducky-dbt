@@ -23,7 +23,7 @@ models:
         data_tests:
           - not_null
 
-  - name: stg_fi__stocks.sql
+  - name: stg_fi__stocks
     description: "Finland - stocks and prices"
     columns:
       - name: mekofi_code
@@ -31,3 +31,42 @@ models:
         data_tests:
           - unique
           - not_null
+
+  - name: stg_cei__prices
+    description: "CEI - stocks and prices"
+    columns:
+      - name: code
+        description: "sku of the product"
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_cei__db_factoryitems
+    description: "existing CEI items in 'items' table in production db"
+    columns:
+      - name: item_id
+        description: "id in table 'item'"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: code
+        description: "sku of the product"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: manufacturer_id
+        description: "foreign key to 'manufacturer' table in the production db"
+
+  - name: int_cei_items_filtered_for_insert.sql
+    description: "pricelist products that do not exist in database 'items' table"
+    columns:
+      - name: code
+        description: "sku of the product"
+        data_tests:
+          - unique
+          - not_null
+
+      - name: manufacturer_id
+        description: "foreign key for manufacturer's id"
