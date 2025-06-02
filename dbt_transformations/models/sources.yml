@@ -48,8 +48,15 @@ sources:
       external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/auger/2025_04_auger_pricelist.xlsx"
     tables:
       - name: stg_auger__prices
+
   - name: cei_pricelist
     meta:
       external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/cei/2024_01_cei_pricelist.parquet"
     tables:
       - name: stg_cei__prices
+
+  - name: fm_pricelist
+    meta:
+      external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/federal_mogul/pep_price_list_2025.xlsx"
+    tables:
+      - name: stg_fm__prices

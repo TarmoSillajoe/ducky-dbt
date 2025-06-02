@@ -70,3 +70,35 @@ models:
 
       - name: manufacturer_id
         description: "foreign key for manufacturer's id"
+
+  - name: stg_fm__prices
+    description: "fm pricelist"
+    columns:
+      - name: brand
+      - name: product_category
+      - name: code
+        description: "sku of the product"
+        data_tests:
+          - unique
+          - not_null
+      - name: sub_segment
+      - name: lvcv
+        description: "commercial or light vehicle"
+      - name: cluster_rebates
+      - name: invoice
+        description: "price in Euros for us"
+      - name: invoice_1
+      - name: increase_pep
+      - name: remarks
+      - name: stg_cei__prices
+      - name: status
+      - name: invoice_2
+      - name: invoice_3
+      - name: ds_range
+
+  - name: int_fm_items_filtered_for_update
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - item_id
+            - min_order
