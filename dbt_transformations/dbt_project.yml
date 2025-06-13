@@ -29,3 +29,7 @@ models:
   dbt_transformations:
     +materialized: view
     # Add any specific model configurations here if needed
+seeds:
+  dbt_transformations:
+    +enabled: true
+    +schema: seed_data
