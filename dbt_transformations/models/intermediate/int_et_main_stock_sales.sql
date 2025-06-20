@@ -16,6 +16,6 @@ with sales as (
         left join {{ ref('stg_bao__rvsoft_products') }} lmmat using (siffer)
         left join {{ ref('rvsoft_cv_groups') }} cvgroups using (grupp)
         where h.liik = 'M' and h.firma_id not in ('MEIE') and h.firma_id not ilike 'E80%'
-            and h.kuup between '2018-01-01' and today()
+            and h.kuup between '2017-01-01' and today()
 )
 select * from sales
