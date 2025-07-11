@@ -2,7 +2,6 @@ version: 2
 
 sources:
   - name: downloads
-    # Korrekte Einrückung für meta
     meta:
       external_location: "/home/tarmo/bao_tooted/data/processed/balanss_ajalugu.parquet"
     tables:
