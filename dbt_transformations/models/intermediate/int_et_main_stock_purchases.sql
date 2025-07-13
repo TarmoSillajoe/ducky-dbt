@@ -12,7 +12,7 @@ with purchases as (
         history.firma_id,
         history.jrk,
         lmmat.nimi as nimetus,
-        replace(lmmat.tkood, ' ', '') as supplier_article,
+        replace(lmmat.tkood_normalized, ' ', '') as supplier_article,
         cvgroups.grupinimi,
         lmmat.kamark
         from {{ ref('stg_bao__sales_and_purchases') }} history
