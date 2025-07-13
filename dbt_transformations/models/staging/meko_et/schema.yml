@@ -22,3 +22,12 @@ models:
         description: "Customer's code in BAO's system"
         data_tests:
           - not_null
+
+  - name: stg_bao__rvsoft_products
+    description: "Products data from RVSoft"
+    columns:
+      - name: siffer
+        description: "sku of the product"
+        data_tests:
+          - not_null
+          - unique

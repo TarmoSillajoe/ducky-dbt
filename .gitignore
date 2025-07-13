@@ -2,6 +2,7 @@
 *.duckdb
 *.xlsx
 *.dbf
+*.DBF
 logs/
 # Ignore dbt log files
 logs/
@@ -17,6 +18,7 @@ dbt_packages/
 
 # Ignore environment-specific files
 .env
+uv.lock
 
 # Ignore Python virtual environment
 venv/
