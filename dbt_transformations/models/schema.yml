@@ -1,28 +1,6 @@
 version: 2
 
 models:
-  - name: stg_bao__sales_and_purchases
-    description: "Sold items 2022-01-01..."
-    tests:
-      - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - firma_id
-            - jrk
-            - siffer
-            - vkogus
-            - skogus
-            - liik
-    columns:
-      - name: siffer
-        description: "sku of the product"
-        data_tests:
-          - not_null
-
-      - name: firma_id
-        description: "Customer's code in BAO's system"
-        data_tests:
-          - not_null
-
   - name: stg_fi__stocks
     description: "Finland - stocks and prices"
     columns:

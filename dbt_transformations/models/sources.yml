@@ -3,30 +3,30 @@ version: 2
 sources:
   - name: fi_stocks
     meta:
-      external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/koivunen/basic_info.csv"
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/koivunen/basic_info.csv"
     tables:
       - name: stg_fi__stocks
 
   - name: zf_pricelist
     meta:
-      external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/zf/B2 09052025.xlsx"
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/zf/B2 09052025.xlsx"
     tables:
       - name: stg_zf__prices
 
   - name: auger_pricelist
     meta:
-      external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/auger/2025_04_auger_pricelist.xlsx"
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/auger/2025_04_auger_pricelist.xlsx"
     tables:
       - name: stg_auger__prices
 
   - name: cei_pricelist
     meta:
-      external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/cei/2024_01_cei_pricelist.parquet"
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/cei/2024_01_cei_pricelist.parquet"
     tables:
       - name: stg_cei__prices
 
   - name: fm_pricelist
     meta:
-      external_location: "/mnt/c/Users/tarmos/OneDrive - BALTI AUTOOSAD AS/federal_mogul/pep_price_list_2025.xlsx"
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/federal_mogul/pep_price_list_2025.xlsx"
     tables:
       - name: stg_fm__prices
