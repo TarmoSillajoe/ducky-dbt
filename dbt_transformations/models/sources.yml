@@ -13,6 +13,18 @@ sources:
     tables:
       - name: stg_zf__prices
 
+  - name: hengst_products
+    meta:
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/hengst/2024_01_hengst_pricelist.xlsx"
+    tables:
+      - name: stg_hengst__products
+
+  - name: mann_products
+    meta:
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/mann_hummel/2025_07_mann_hummel_pricelist.xlsx"
+    tables:
+      - name: stg_mann__products
+
   - name: auger_pricelist
     meta:
       external_location: "{{ env_var('DBT_EXTERNAL') }}/auger/2025_04_auger_pricelist.xlsx"
