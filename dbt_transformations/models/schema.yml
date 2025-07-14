@@ -10,6 +10,15 @@ models:
           - unique
           - not_null
 
+  - name: stg_bosch__cv_products
+    description: "Bosch CV products"
+    columns:
+      - name: code
+        description: "sku of the product"
+        data_tests:
+          - unique
+          - not_null
+
   - name: stg_cei__prices
     description: "CEI - stocks and prices"
     columns:

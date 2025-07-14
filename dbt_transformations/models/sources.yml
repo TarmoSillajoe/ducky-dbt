@@ -30,3 +30,9 @@ sources:
       external_location: "{{ env_var('DBT_EXTERNAL') }}/federal_mogul/pep_price_list_2025.xlsx"
     tables:
       - name: stg_fm__prices
+
+  - name: bosch_cv_products
+    meta:
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/bosch/bosch_cv_2024.xlsx"
+    tables:
+      - name: stg_bosch__cv_products
