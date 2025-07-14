@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: downloads
+  - name: sales_and_purchases
     meta:
       external_location: "{{ env_var('DBT_EXTERNAL') }}/bao/balanss_ajalugu.parquet"
     tables:

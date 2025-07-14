@@ -28,5 +28,5 @@ select
     firmanimi,
     liik,
     jrk
-from {{ source('downloads', 'stg_sales_history') }}
+from {{ source('sales_and_purchases', 'stg_sales_history') }}
 where liik not in ('P')
