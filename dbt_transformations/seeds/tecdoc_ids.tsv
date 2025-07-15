@@ -1,4 +1,4 @@
-Brand / Marke	Datasupplier No. / Datenlieferanten-Nr.	Updated data? / Aktualisierte Daten?	DMM R2	DSE
+brand	data_supplier_no	updated	dmm_r2	dse
 SPIDAN	1	0	y	CDS
 HELLA	2	1	y	PDS
 ATE	3	0	y	PDS
