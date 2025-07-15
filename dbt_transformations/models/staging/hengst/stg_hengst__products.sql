@@ -3,7 +3,8 @@ with final as (
         *,
         upper(
             regexp_replace(hengsttype, '\s|[.]|[-/]', '', 'ig')
-        ) as code
+        ) as code,
+        'hengst_cv' as arbitrary_brand
     from
         read_xlsx(
             {{ source('hengst_products', 'stg_hengst__products') }},

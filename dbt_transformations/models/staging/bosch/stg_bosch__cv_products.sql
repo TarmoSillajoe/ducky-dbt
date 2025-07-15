@@ -7,7 +7,9 @@ with final as (
             material_description,
             pg1,
             pg2,
-            pg3
+            pg3,
+            'bosch_cv' as arbitrary_brand,
+
         from
             read_xlsx (
                 {{ source('bosch_cv_products', 'stg_bosch__cv_products') }},
