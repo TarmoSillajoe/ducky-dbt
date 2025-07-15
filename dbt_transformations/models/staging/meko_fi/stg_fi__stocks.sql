@@ -3,7 +3,7 @@
 select
 
 -- integers
-    tecdoc_dlnr,
+    cast(tecdoc_dlnr as varchar) as tecdoc_dlnr,
     sales_quantity,
     stock_malmi,
     stock_kouvola,
@@ -18,6 +18,9 @@ select
     round(purch_price_excl_vat, 2) as purch_price_excl_vat,
 
     -- varchars
+    upper(
+        regexp_replace (tecdoc_artnr, '\s|[.]|[-/]', '', 'ig')
+        ) as code,
     mekofi_code,
     article_descr,
     alternatives,

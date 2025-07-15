@@ -1,7 +1,8 @@
 with final as (
     select
         *,
-        upper(regexp_replace(mannfilter, '\s|[.]|[-/]', '', 'ig')) as code
+        upper(regexp_replace(mannfilter, '\s|[.]|[-/]', '', 'ig')) as code,
+        'mann_hummel_cv' as arbitrary_brand,
 
     from
         read_xlsx(
