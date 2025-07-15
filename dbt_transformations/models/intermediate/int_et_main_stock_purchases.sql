@@ -18,7 +18,7 @@ with purchases as (
                     bosch_cv.arbitrary_brand, 
                     hengst_cv.arbitrary_brand,
                     mann_cv.arbitrary_brand) as cv_group_name,
-        
+
         from {{ ref('stg_bao__sales_and_purchases') }} history
         left join {{ ref('stg_bao__rvsoft_products') }} lmmat using (siffer)
         left join {{ ref('rvsoft_cv_groups') }} cvgroups using (grupp)
@@ -28,5 +28,23 @@ with purchases as (
         left join {{ ref('stg_fi__stocks') }} fi on history.siffer=fi.mekofi_code
         where history.liik = 'O' and history.firma_id not in ('MEIE') and history.firma_id not ilike 'E80%'
             and history.kuup between '2023-01-01' and '2025-12-31'
-)
-select * from purchases
+),
+
+    final as (
+        select 
+            purchases.kuup,
+            purchases.firmanimi,
+            purchases.firma_id,
+            purchases.siffer,
+            purchases.ssumma,
+            purchases.skogus,
+            purchases.nimetus,
+            purchases.supplier_article,
+            tecdoc.brand,
+
+        from
+        purchases
+        left join {{ ref('tecdoc_ids') }} tecdoc on purchases.tecdoc_brand_id=cast(data_supplier_no as varchar)
+        where purchases.cv_group_name is not null
+    )
+select * from final

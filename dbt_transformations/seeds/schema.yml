@@ -12,3 +12,19 @@ seeds:
         tests:
           - unique
           - not_null
+
+  - name: tecdoc_ids
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - data_supplier_no
+            - brand
+    description: "TecDoc manufacturer names and TecDoc manufacturer-ids mapping"
+    columns:
+      - name: brand
+        tests:
+          - not_null
+      - name: data_supplier_no
+        tests:
+          - unique
+          - not_null
