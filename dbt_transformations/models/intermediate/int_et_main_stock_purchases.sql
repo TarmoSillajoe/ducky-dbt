@@ -8,7 +8,7 @@ with purchases as (
         history.kuup,
         history.ssumma,
         history.skogus,
-        history.firmanimi
+        history.firmanimi,
         history.firma_id,
         history.jrk,
         lmmat.nimi as nimetus,
