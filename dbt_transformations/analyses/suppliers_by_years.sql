@@ -18,11 +18,10 @@ with years as (
     pivot purch
     on date_part('year',date_purchased)
     using try_cast(sum(purchase_qty_eur) as integer)
-    group by brand
+    group by supplier
     )
 select * from years order by "2024" desc
 ;
 
-select max(kuup) from {{ ref('stg_bao__sales_and_purchases') }};
 detach data;
 

@@ -23,6 +23,5 @@ with years as (
 select * from years order by "2024" desc
 ;
 
-select max(kuup) from {{ ref('stg_bao__sales_and_purchases') }};
 detach data;
 

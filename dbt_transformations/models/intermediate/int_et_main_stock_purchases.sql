@@ -8,7 +8,7 @@ with purchases as (
         history.kuup,
         history.ssumma,
         history.skogus,
-        history.firmanimi,
+        history.firmanimi
         history.firma_id,
         history.jrk,
         lmmat.nimi as nimetus,
@@ -32,15 +32,16 @@ with purchases as (
 
     final as (
         select 
-            purchases.kuup,
-            purchases.firmanimi,
-            purchases.firma_id,
-            purchases.siffer,
-            purchases.ssumma,
-            purchases.skogus,
-            purchases.nimetus,
-            purchases.supplier_article,
+            purchases.firmanimi as supplier,
             tecdoc.brand,
+            purchases.siffer as no_pim_article_id,
+            purchases.nimetus as article_description,
+            purchases.kuup as date_purchased,
+            purchases.firma_id as supplier_id,
+            purchases.ssumma as purchase_qty_eur,
+            purchases.skogus as purchase_volume_pcs,
+            purchases.supplier_article,
+            tecdoc_brand_id,
 
         from
         purchases
