@@ -19,9 +19,9 @@ with
         supplier,
         brand,
         for_year
-),
+    ),
 
-    final as (
+    grouped as (
         from articles_grouped
         where supplier_article is not null and supplier_article <> '' and brand is not null
         order by
@@ -29,12 +29,13 @@ with
             brand,
             purchase_qty_eur desc,
             supplier
+    ),
+    pivoted as (
+        pivot grouped on for_year
+        using sum(purchase_qty_eur) as purchase_qty_eur,
+              sum(purchase_volume_pcs) as purchase_volume_pcs
     )
-
-pivot final on for_year
-using sum(purchase_qty_eur) as purchase_qty_eur
-    ,sum(purchase_volume_pcs) as purchase_volume_pcs
-;
+    from pivoted;
 
 detach data;
 
