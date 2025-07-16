@@ -33,7 +33,6 @@ with sales as (
 
     final as (
         select
-            firmanimi as customer,
             firma_id,
             vsumma,
             vkogus,

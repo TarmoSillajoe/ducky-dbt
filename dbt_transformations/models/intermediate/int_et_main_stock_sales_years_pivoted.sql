@@ -1,6 +1,3 @@
-load spatial;
-attach '{{ env_var('HOME') }}/mydbt/data/data.duckdb';
-
 
 with 
     years_pivoted as (
@@ -24,11 +21,4 @@ with
         from names_and_ids
         order by "2025_quantity_eur" desc
     )
-    from final
-;
-
--- from {{ ref('stg_bao__rvsoft_firma') }} using sample 40;
--- summarize from {{ ref('stg_bao__rvsoft_firma') }};
-
-detach data;
-
+from final

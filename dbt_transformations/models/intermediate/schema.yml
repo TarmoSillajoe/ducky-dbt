@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: "int_et_main_stock_sales_grouped"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - firma_id
+            - year
+
+    description: "Sales grouped by customer-ids. Includes all product - CV, LV etc"
+    columns:
+      - name: firma_id
+        description: "id of a customer in RVSoft"
+        data_tests:
+          - not_null
+          # - unique
+
+  - name: "int_et_main_stock_sales_years_pivoted"
+    columns:
+      - name: kood
+        data_tests:
+          - unique

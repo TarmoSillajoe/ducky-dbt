@@ -1,6 +1,14 @@
 version: 2
 
 models:
+  - name: stg_bao__rvsoft_firma
+    description: "Companies data in RVSoft"
+    columns:
+      - name: kood
+        data_tests:
+          - not_null
+          - unique
+
   - name: stg_bao__sales_and_purchases
     description: "Sold and bought items 2018-01-01..."
     tests:
