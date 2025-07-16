@@ -22,5 +22,8 @@ group by customer, year
 order by year desc
 ;
 
+from {{ ref('stg_bao__rvsoft_firma') }} using sample 40;
+summarize from {{ ref('stg_bao__rvsoft_firma') }};
+
 detach data;
 
