@@ -12,7 +12,7 @@ with
             years_pivoted.*,
             companies.nimi as name,
             category_description,
-            companies.kood
+            kood,
         from years_pivoted 
         join {{ ref('stg_bao__rvsoft_firma') }} companies on years_pivoted.firma_id=companies.kood
         left join {{ ref('rvsoft_company_categories') }} cust_cats on companies.tyyp=cust_cats.category_id
@@ -27,7 +27,8 @@ with
             "2024_quantity_eur",
             "2024_avg_profitability_percent",
             "2025_quantity_eur",
-            "2025_avg_profitability_percent"
+            "2025_avg_profitability_percent",
+            kood
         from names_and_ids
         order by "2024_quantity_eur" desc
     )
