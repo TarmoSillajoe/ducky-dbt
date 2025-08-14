@@ -10,6 +10,15 @@ models:
           - unique
           - not_null
 
+  - name: stg_fi__crossrefs
+    description: "Finland - product numbers and their manufacturer data"
+    columns:
+      - name: product_code
+        description: "sku of the product"
+        data_tests:
+          - unique
+          - not_null
+
   - name: stg_bosch__cv_products
     description: "Bosch CV products"
     columns:

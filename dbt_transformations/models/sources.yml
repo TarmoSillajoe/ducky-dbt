@@ -7,6 +7,12 @@ sources:
     tables:
       - name: stg_fi__stocks
 
+  - name: fi_crossrefs
+    meta:
+      external_location: "{{ env_var('DBT_EXTERNAL') }}/koivunen/crosslist_ean_tecdoc_20250106.xlsx"
+    tables:
+      - name: stg_fi__crossrefs
+
   - name: zf_pricelist
     meta:
       external_location: "{{ env_var('DBT_EXTERNAL') }}/zf/B2 09052025.xlsx"

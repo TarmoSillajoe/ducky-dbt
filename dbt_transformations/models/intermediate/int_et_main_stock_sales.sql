@@ -27,7 +27,7 @@ with sales as (
 
 
         where history.liik = 'M' and history.firma_id not in ('MEIE') and history.firma_id not ilike 'E80%'
-            and history.kuup between '2023-01-01' and '2025-12-31'
+            and history.kuup between '2018-01-01' and '2025-12-31'
 )
 ,
 
