@@ -4,6 +4,16 @@ import os
 
 
 def normalize_values(lazyframe, column_name: str):
+    """_summary_
+
+    Args:
+        lazyframe (_type_): input polars lazyfrme
+        column_name (str): the column to normalize
+
+    Returns:
+        a copy of the input lazyframe with a new normalized string column
+        named column_names_normalized
+    """
     return lazyframe.with_columns(
         pl.col(column_name)
         .str.strip_chars()
