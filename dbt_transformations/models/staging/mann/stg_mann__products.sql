@@ -1,9 +1,13 @@
 with final as (
     select
-        *,
+        mannfilter,
+        new,
+        price_net_in,
+        filtertype,
+        segment,
         upper(regexp_replace(mannfilter, '\s|[.]|[-/]', '', 'ig')) as code,
-        'mann_hummel_cv' as arbitrary_brand,
-
+        case
+            when segment ilike '%truck%' then 'mann_hummel_cv' else null end as arbitrary_brand 
     from
         read_xlsx(
             {{ source('mann_products', 'stg_mann__products') }},
@@ -13,7 +17,6 @@ with final as (
             all_varchar = true
         )
 
-    where segment ilike '%truck%'
 )
 
 select * from final

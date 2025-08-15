@@ -2,7 +2,7 @@ with products as (
     SELECT
         products.siffer,
         products.tkood,
-        products.grupp,
+        try_cast(products.grupp as integer) as grupp,
         cvgroups.grupinimi,
         bosch_cv.arbitrary_brand,
         hengst_cv.arbitrary_brand,
