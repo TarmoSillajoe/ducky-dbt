@@ -15,7 +15,7 @@ with final as (
             when pc_transporter ilike '%x%' then 'hengst_pv'
             when offhighway ilike '%x%' then 'hengst_offhighway'
             else null
-        end as arbitrary_brand
+        end as arbitrary_category
     from
         read_xlsx(
             {{ source('hengst_products', 'stg_hengst__products') }},

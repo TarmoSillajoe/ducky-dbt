@@ -8,7 +8,7 @@ with final as (
             pg1,
             pg2,
             pg3,
-            'bosch_cv' as arbitrary_brand,
+            'bosch_cv' as arbitrary_category,
 
         from
             read_xlsx (

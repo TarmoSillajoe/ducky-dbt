@@ -15,9 +15,9 @@ with purchases as (
         coalesce(lmmat.tkood_normalized, fi.code) as supplier_article,
         coalesce(lmmat.kamark, fi.tecdoc_dlnr) as tecdoc_brand_id,
         coalesce(cvgroups.grupinimi, 
-                    bosch_cv.arbitrary_brand, 
-                    hengst_cv.arbitrary_brand,
-                    mann_cv.arbitrary_brand) as cv_group_name,
+                    bosch_cv.arbitrary_category, 
+                    hengst_cv.arbitrary_category,
+                    mann_cv.arbitrary_category) as cv_group_name,
 
         from {{ ref('stg_bao__sales_and_purchases') }} history
         left join {{ ref('stg_bao__rvsoft_products') }} lmmat using (siffer)

@@ -7,7 +7,8 @@ with final as (
         segment,
         upper(regexp_replace(mannfilter, '\s|[.]|[-/]', '', 'ig')) as code,
         case
-            when segment ilike '%truck%' then 'mann_hummel_cv' else null end as arbitrary_brand 
+            when segment ilike '%truck%' then 'mann_hummel_cv' else null
+        end as arbitrary_category
     from
         read_xlsx(
             {{ source('mann_products', 'stg_mann__products') }},
